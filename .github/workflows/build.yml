@@ -1,0 +1,23 @@
+name: Build & Test
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - run: npm install
+    - run: npm test
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: docker build -t bebe-ai-real:latest .
+    - run: docker run -d -p 8080:8080 --name test bebe-ai-real:latest && sleep 3 && curl -f http://localhost:8080/health || exit 1 && docker stop test

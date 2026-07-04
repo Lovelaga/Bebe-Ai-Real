@@ -1,0 +1,11 @@
+Bebe Ai Real
+
+Project: Bebe-Ai-Real
+
+This file contains the main project notes and placeholders for the Bebe Ai Real project.
+
+Tips:
+- Replace this text with your project notes, models, or dataset links.
+- Keep large files out of the repo and store them in releases or external storage.
+
+Status: Initial commit — structure added.

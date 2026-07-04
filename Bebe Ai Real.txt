@@ -1,1 +1,3 @@
-Bebe Ai Real
+This file was the original placeholder and has been superseded by `bebe-ai-real.txt`.
+
+Please see `bebe-ai-real.txt` for the active project notes.
